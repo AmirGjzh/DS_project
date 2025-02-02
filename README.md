@@ -31,5 +31,7 @@ Print the exact amount s1 needs to pay s2 to settle their debt.
 
 # How to Use
 Clone the repository.
+
 Run the program and input commands as described above.
+
 View results for each command in the console.
