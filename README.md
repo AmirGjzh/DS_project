@@ -1,37 +1,60 @@
-# Debt Tracker
-A simple financial tracking system to manage debts and credits between individuals over time. This project calculates and tracks who owes whom, identifies debtors and creditors, and provides insights into financial relationships.
+# DebtTracker
 
-# Features
-1 - Track Loans : Record loans between individuals.
+A high-performance **financial tracking system** written in C++ for managing debts and credits between individuals.  
+It uses a **self-balancing map (AVL-like)** and a **segment tree** to efficiently calculate balances, debtors, creditors, and settlements.
 
-2 - Identify Debtors/Creditors : Determine who owes or is owed money.
+---
 
-3 - Calculate Net Capital : Find individuals with the highest or lowest net capital.
+## ✨ Features
+- **Track Loans**: Record and update loans between individuals.  
+- **Net Capital Analysis**: Identify who has the highest or lowest net capital.  
+- **Debtor & Creditor Counts**: See how many people someone owes or is owed by.  
+- **Settle Debts**: Calculate the exact amount required to settle debts between two people.  
+- **Efficient Data Structures**: Uses a custom AVL-like map and segment tree for fast queries.  
 
-4 - Settle Debts : Calculate the exact amount needed to settle debts between two individuals.
+---
 
-# Commands
-1 - Loan : s1 s2 x
-Person s1 loans x dollars to person s2.
+## ⚙️ Commands
+The program reads a number of queries `q`, followed by `q` commands.  
+Each command has the following format:
 
-2 - Max Net Capital : 2
-Print the person with the highest net capital (income - expenses).
+1. **Loan**  
+   ```
+   1 s1 s2 x
+   ```
+   - Person `s1` loans `x` dollars to person `s2`.  
 
-3 - Min Net Capital : 3
-Print the person with the lowest net capital (income - expenses).
+2. **Max Net Capital**  
+   ```
+   2
+   ```
+   - Prints the person with the **highest net capital**.  
+   - If no valid person exists, prints `-1`.  
 
-4 - Count Debtors : 4 s
-Print the number of people who owe money to person s.
+3. **Min Net Capital**  
+   ```
+   3
+   ```
+   - Prints the person with the **lowest net capital**.  
+   - If no valid person exists, prints `-1`.  
 
-5 - Count Creditors : 5 s
-Print the number of people person s owes money to.
+4. **Count Debtors**  
+   ```
+   4 s
+   ```
+   - Prints how many people owe money to person `s`.  
 
-6 - Settle Debt : 6 s1 s2
-Print the exact amount s1 needs to pay s2 to settle their debt.
+5. **Count Creditors**  
+   ```
+   5 s
+   ```
+   - Prints how many people person `s` owes money to.  
 
-# How to Use
-Clone the repository.
+6. **Settle Debt**  
+   ```
+   6 s1 s2
+   ```
+   - Prints the exact amount `s1` must pay `s2` to settle their debt.  
+   - Amounts are formatted with two decimal places.  
 
-Run the program and input commands as described above.
-
-View results for each command in the console.
+---
